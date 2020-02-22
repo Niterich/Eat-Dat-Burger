@@ -1,0 +1,18 @@
+<h1>Burgers to eat:</h1>
+
+<h3>What burgers do you wish to devour today?</h3>
+
+<ul>
+  {{#each wishes}}
+  	<li>
+  	   <p>ID: {{this.id}}</p>
+       <p>Burger: {{this.name}}</p>
+  	</li>
+  {{/each}}
+</ul>
+
+<form action="/" method="POST">
+	<textarea type="text" name="wish"></textarea>
+
+	<button type="submit">Yes I wish to eat this.</button>
+</form>
