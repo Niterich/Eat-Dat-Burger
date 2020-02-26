@@ -6,8 +6,7 @@ USE burger_db;
 
 CREATE TABLE burgers (
   id int NOT NULL AUTO_INCREMENT,
-  name varchar(255) NOT NULL,
+  burgerName VARCHAR(255) NOT NULL,
+  devoured BOOLEAN,
   PRIMARY KEY (id)
 );
-
-INSERT INTO burgers (wish) VALUES ("?");

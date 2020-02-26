@@ -1,0 +1,1 @@
+INSERT INTO burgers (burgerName, devoured) VALUES ("Bacon Cheeseburger", false), ("Mushroom Swiss Burger", false), ("Black and Bleu Burger", false), ("Breakfast Burger", true)
