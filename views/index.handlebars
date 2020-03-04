@@ -1,4 +1,50 @@
-<h1>Burgers to eat:</h1>
+<h1>Eat Dat Burger</h1>
+
+<h2>Not Devoured: </h2>
+
+<ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    <li>
+        {{id}}
+        {{burgerName}}
+        <button class="change-devoured" data-id="{{id}}">
+            {{#unless devoured}}DEVOUR!{{/unless}}
+        </button>
+    </li>
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Devoured!</h2>
+
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    <li>
+        {{id}}
+        {{burgerName}}
+    </li>
+    {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Add a Burger: </h2>
+<form action="/" method="POST">
+	<textarea type="text" name="newBurger"></textarea>
+
+	<button type="submit">Yes I wish to eat this.</button>
+</form> 
+
+
+
+{{!-- <form class="create-form">
+
+    <div class="form-group">
+        <label for="ca">Burger Name: </label>
+        <input type="text" id="ca" name="name">
+    </div> --}}
+{{!-- <h1>Burgers to eat:</h1>
 
 <h3>What burgers do you wish to devour today?</h3>
 
@@ -15,4 +61,4 @@
 	<textarea type="text" name="wish"></textarea>
 
 	<button type="submit">Yes I wish to eat this.</button>
-</form>
+</form> --}}
