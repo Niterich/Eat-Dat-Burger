@@ -1,0 +1,116 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+body {
+    background: rgb(126, 8, 255);
+    background: linear-gradient(
+        180deg,
+        rgba(126, 8, 255, 0.5704656862745099) 0%,
+        rgba(70, 1, 254, 1) 100%
+    );
+    color: aliceblue;
+    font-family: "Karla", sans-serif;
+    font-size: 1em;
+    height: 100vh;
+}
+
+.burger-hoard button {
+    /* display: inline-block; */
+    border-radius: 2px;
+    background-color: #6773b4;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.eaten-burgers button {
+    /* display: inline-block; */
+    border-radius: 2px;
+    background-color: #6773b4;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#add-burger {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(244, 255, 255);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px #999;
+}
+
+#add-burger:hover {
+    background-color: #6773b4;
+}
+
+#add-burger:active {
+    background-color: #6773b4;
+    box-shadow: 0 1px #6773b4;
+    transform: backround-color .2s;
+}
+
+input {
+    width: 5%;
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 2px;
+    box-sizing: border-box;
+    transition: width 0.4s ease-in-out;
+}
+input:focus {
+    width: 20%;
+}
+
+li,
+.padded {
+    padding: 10px;
+}
+
+.header {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+.burger-hoard {
+    float: left;
+    position: relative;
+}
+
+.eaten-burgers {
+    float: right;
+    position: relative;
+}
+
+.add-burger {
+    clear: both;
+    text-align: center;
+    margin: 15px;
+    position: relative;
+    font-size: 16px;
+}

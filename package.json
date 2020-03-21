@@ -1,26 +1,29 @@
 {
-  "name": "eat-dat-burger",
+  "name": "Burger",
   "version": "1.0.0",
-  "description": "A burger logger created with node, express and handlebars",
-  "main": "server.js",
+  "description": "Burger logger made with MySQL, Sequelize, Node, Express, and Handlebars.",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Niterich/Eat-Dat-Burger.git"
+    "url": "git+https://github.com/robinaguilar713/Burger.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Niterich/Eat-Dat-Burger/issues"
+    "url": "https://github.com/robinaguilar713/Burger/issues"
   },
-  "homepage": "https://github.com/Niterich/Eat-Dat-Burger#readme",
+  "homepage": "https://github.com/robinaguilar713/Burger#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "handlebars": "^4.7.3",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.5"
   }
 }

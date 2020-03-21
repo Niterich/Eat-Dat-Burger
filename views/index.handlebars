@@ -1,64 +1,41 @@
-<h1>Eat Dat Burger</h1>
+<div class="header">
+  <h1>Eat Dat Burger</h1>
+  <img class="logo" src="./assets/images/burger-pic.png" alt="eets a burger lol">
+</div>
 
-<h2>Not Devoured: </h2>
+<div class="burger-hoard">
+<h2>Burger Hoard</h2>
 
-<ul>
+  <ul>
     {{#each burgers}}
-    {{#unless devoured}}
-    <li>
-        {{id}}
-        {{burgerName}}
-        <button class="change-devoured" data-id="{{id}}">
-            {{#unless devoured}}DEVOUR!{{/unless}}
-        </button>
-    </li>
-    {{/unless}}
+      {{#unless devoured}}
+        {{> burgers/burger-block devoured=true}}
+      {{/unless}}
     {{/each}}
-</ul>
+  </ul>
+</div>
+  
+<div class="eaten-burgers">
+  <h2>Devoured Burgers</h2>
 
-<h2>Devoured!</h2>
-
-<ul>
+  <ul>
     {{#each burgers}}
-    {{#if devoured}}
-    <li>
-        {{id}}
-        {{burgerName}}
-    </li>
-    {{/if}}
+      {{#if devoured}}
+        {{> burgers/burger-block devoured=false}}
+      {{/if}}
     {{/each}}
-</ul>
+  </ul>
+</div>
 
-<h2>Add a Burger: </h2>
-<form action="/" method="POST">
-	<textarea type="text" name="newBurger"></textarea>
+<div class="add-burger">
+  <h2>Add a Burger</h2>
+  <form class="create-form">
 
-	<button type="submit">Yes I wish to eat this.</button>
-</form> 
+    <div class="form-group padded">
+      <label for="ba">Burger Name:</label>
+      <input type="text" id="ba" name="name">
+    </div>
 
-
-
-{{!-- <form class="create-form">
-
-    <div class="form-group">
-        <label for="ca">Burger Name: </label>
-        <input type="text" id="ca" name="name">
-    </div> --}}
-{{!-- <h1>Burgers to eat:</h1>
-
-<h3>What burgers do you wish to devour today?</h3>
-
-<ul>
-  {{#each wishes}}
-  	<li>
-  	   <p>ID: {{this.id}}</p>
-       <p>Burger: {{this.name}}</p>
-  	</li>
-  {{/each}}
-</ul>
-
-<form action="/" method="POST">
-	<textarea type="text" name="wish"></textarea>
-
-	<button type="submit">Yes I wish to eat this.</button>
-</form> --}}
+    <button type="submit" id="add-burger">I would like to eat this.</button>
+  </form>
+</div>
